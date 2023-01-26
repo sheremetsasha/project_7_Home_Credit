@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Model dashboard </title>
+        <script src = "{{url_for('static', filename = 'shap.js')}}"></script>
+        <script src = "{{url_for('static', filename = 'plotly.js')}}"></script>
+        <!-- some quick styles -->
+        <link rel = "stylesheet" href = "{{url_for('static', filename = 'water.css')}}">
+    </head>
+    <body>
+        <a href = "/"> Back </a>
+        <h1 style = "color: #005875; font-family: Arial"> Client no.: {{client_id}} </h1>
+        <p style = "max-width: 200%; color: #0091c2; font-family: Arial"> Result of the prediction : {{result_pred}} </p>
+        <p style = "max-width: 200%; color: #0091c2; font-family: Arial"> Customer score : {{score_client}} </p>
+        {{ explainer | safe }}
+        {% for row in charts %}
+        <div class="row">
+            {% for chart in row %}
+            <div class="chart">
+                {{chart | safe }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </body>
+</html>
+</html>

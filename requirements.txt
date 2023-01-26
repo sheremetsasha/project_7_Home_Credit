@@ -1,0 +1,10 @@
+flask
+plotly
+scikit-learn
+numpy<1.24
+pandas
+seaborn
+shap
+matplotlib
+lightgbm
+mpld3

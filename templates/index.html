@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title> Model dashboard </title>
+        <!-- some quick styles -->
+        <link rel = "stylesheet" href = "{{url_for('static', filename='water.css')}}">
+    </head>
+    <body>
+        <h1> Enter customer number </h1>
+        <form action = "/chart/" method = "GET">
+            <input type = "number" value = "1" name = "id"/>
+            <input type = "submit" value = "Check results">
+        </form>
+    </body>
+</html>
